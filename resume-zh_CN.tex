@@ -1,0 +1,107 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage[colorlinks,linkcolor=red]{hyperref}
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{李萍}
+
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+\contactInfo{lipingict@gmail.com}{(+86) 130-200-48987}{http://www.lipingict.com}
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{中国科学院计算技术研究所}, 北京}{2014 -- 至今}
+\textit{在读硕士}\ 计算机科学与技术
+\datedsubsection{\textbf{吉林大学}, 长春, 吉林}{2010 -- 2014}
+\textit{学士}\ 计算机科学与技术
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: Python == C++ > Scala > Shell
+  \item 平台: Spark, Hadoop
+  \item 工具: github, latex
+ % \item 统计: numpy, scikit-learn, pandas, matplotlib
+\end{itemize}
+
+\section{\faUsers\ 实习/项目经历}
+\datedsubsection{\faCheck\ {\textbf{百度凤巢，北京}}  }{2015年5月 -- 2015年8月}
+\role{实习}{ 机器学习工程师}
+%\begin{itemize}
+%  \item 基于凤巢特征抽取系统Adfea和模型训练系统Platform开发了一个Feature评价工具包, 协助了一个产品上线.
+%  \item 评估使用时间衰减策略来预测suggestion query 的CPM.
+%  \item 调研Kaggle CTR prediction 比赛特征以及方法.
+%\end{itemize}
+\begin{onehalfspacing}
+在FCR\_Model实习期间主要负责模型评估、特征挑选以及特征调研.
+\begin{itemize}
+  \item 凤巢没有统一的特征分析工具，特征的筛选是自由组合，筛选效率较低，基于凤巢特征抽取系统Adfea和模型训练系统Platform开发一个Feature评价工具包用来分析特征从而助力特征挑选.
+  \item 线上使用的sug cpm预估模型效率较低，使用时间衰减策略来预测suggestion query 的CPM的可以极大地提高效率. 负责评估该策略的效果，使用百度半年的sug数据集在不同衰减因子以及时间窗口上做测试，效果略好过线上的baseline.
+  \item 调研Kaggle CTR prediction 比赛中优胜选手使用的特征, 连续特征值的处理以及使用的模型，并写出详细的调查报告.
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\faCheck\ {\textbf{图形化大数据机器学习平台 BDA}}}{2015年8月 -- 至今}
+\role{团队项目}{Developer, Spark}
+\begin{onehalfspacing}
+图形化机器学习平台, 由BDA Studio以及BDALib 组成，分别是大数据机器学习库和可拖拽大数据机器学习平台 \href{http://bda.space:18080}{BDA Studio}.
+\begin{itemize}
+  \item 开发三个图算法(\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), 相比于graphx原生算法相比可收敛，具有可扩展性、速度快等特点，可以支持上10亿规模顶点的图数据挖掘.
+  \item 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine} local 版本、spark shared 版本、spark graphx版本, 并使用该算法对movie-lens数据集进行评分预测.
+  \item 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000021-160229111630187-oozie-oozi-W}{NMF}算法的spark graphx版本，支持模型分布式, 并使用该算法进行过社区发现以及电影评分预测.
+\end{itemize}
+\end{onehalfspacing}
+
+%\datedsubsection{\textbf{新浪微博相似用户关系展示}}{2015 年5月 -- 至今}
+%\role{Developer, Python, Django, Networkx}{个人项目}
+%\begin{onehalfspacing}
+%微型网站，查找某一user的相似新浪用户，并展示出之间的链接关系。https://github.com/qiuwuyiye/simrank
+%\begin{itemize}
+%\item 从hive表中读取相似关系，抽取核心用户，并保存它们之间的图结构。
+%\item 根据ID抽取用户的username.
+%\item 支撑相似用户follow 关系图形化显示.
+%\end{itemize}
+%\end{onehalfspacing}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+
+\section{\faHeartO\ 论文及获奖情况}
+\datedline{\textit{Sesssion Segmentation Method Based on COBWEB}, EI 检索}{2012 年6 月}
+\datedline{\textit{Sesssion Segmentation Method Based on Naive Bayes}, ISTP检索}{2012 年9 月}
+\datedline{\textit{连续四年年国家奖学金}, 吉林大学}{2011年 -- 2013年}
+\datedline{\textit{连续四年吉林大学优秀学生}, 吉林大学}{2011年 -- 2013年}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: http://www.lipingict.com
+  % \item GitHub: https://github.com/qiuwuyiye
+  \item 语言: 英语 - 熟练(六级 555)
+  \item 语言: 日语(JLPT N2)
+  \item 爱好：乒乓球, 游泳，瑜伽
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
