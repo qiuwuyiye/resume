@@ -2,13 +2,14 @@
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
 
-\documentclass{resume}
+\documentclass[10pt]{resume}
+\usepackage{geometry}
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage[colorlinks,linkcolor=red]{hyperref}
 \usepackage{cite}
-
+\geometry{left=1.0cm,right=1.0cm,top=1.0cm,bottom=1.0cm}
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
@@ -22,13 +23,16 @@
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
  
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{中国科学院计算技术研究所}, 北京}{2014 -- 2017}
+\datedsubsection{\textbf{中国科学院计算技术研究所,  免试保送}, 北京}{2014 -- 2017}
 \textit{在读硕士}\ 计算机科学与技术
-\datedsubsection{\textbf{吉林大学}, 长春, 吉林}{2010 -- 2014}
+\datedsubsection{\textbf{吉林大学, 1\%}, 长春, 吉林}{2010 -- 2014}
 \textit{学士}\ 计算机科学与技术
 
-\section{\faCogs\ 技能}
+\section{\faTag\ 自我评价}
+\ \ \ \ \\踏实认真，有团队协作的能力和沟通协调的能力。有扎实的编程功底以及较丰富的大数据处理经验。熟悉使用Hadoop，Spark等大数据平台，能熟练使用MapReduce，BSP分布式计算框架。对机器学习等算法有一定认识, 了解Deep Learning等算法。
+
 % increase linespacing [parsep=0.5ex]
+\section{\faCogs\ 技能}
 \begin{itemize}[parsep=0.5ex]
   \item 编程语言: Python == C++ > Scala > Shell
   \item 平台: Spark, Hadoop
@@ -39,15 +43,16 @@
 \end{itemize}
 
 \section{\faUsers\ 实习/项目经历}
-\datedsubsection{\faCheck\ {\textbf{百度凤巢，北京}}  }{2015年5月 -- 2015年8月}
-\role{实习}{ 机器学习工程师}
+\datedsubsection{\faCheck\ {\textbf{百度凤巢}}  }{2015年5月 -- 2015年8月}
+\textbf{个人职责}\ \ 机器学习算法工程师
+\newline
 %\begin{itemize}
 %  \item 基于凤巢特征抽取系统Adfea和模型训练系统Platform开发了一个Feature评价工具包, 协助了一个产品上线.
 %  \item 评估使用时间衰减策略来预测suggestion query 的CPM.
 %  \item 调研Kaggle CTR prediction 比赛特征以及方法.
 %\end{itemize}
 \begin{onehalfspacing}
-在FCR\_Model实习期间主要负责模型评估、特征挑选以及特征调研.
+\textbf{项目概述}\ \ 在FCR\_Model实习期间主要负责模型评估、特征挑选以及特征调研.
 \begin{itemize}
   \item 凤巢没有统一的特征分析工具，特征的筛选是自由组合，筛选效率较低，基于凤巢特征抽取系统Adfea和模型训练系统Platform开发一个Feature评价工具包用来分析特征从而助力特征挑选.
   \item 线上使用的sug cpm预估模型效率较低，使用时间衰减策略来预测suggestion query 的CPM的可以极大地提高效率. 负责评估该策略的效果，使用百度半年的sug数据集在不同衰减因子以及时间窗口上做测试，效果略好过线上的baseline.
@@ -56,9 +61,10 @@
 \end{onehalfspacing}
 
 \datedsubsection{\faCheck\ {\textbf{图形化大数据机器学习平台 BDA Studio}}}{2015年8月 -- 至今}
-\role{团队项目}{Developer, Spark}
+%\role{团队项目}{Developer, Spark}
+\textbf{个人职责}\ \ 算法工程师\newline
 \begin{onehalfspacing}
-图形化机器学习平台, 由BDA Studio以及BDALib 组成，分别是大数据机器学习库和可拖拽大数据机器学习平台 \href{http://bda.space:18080}{BDA Studio}.
+\textbf{项目概述}\ \ 图形化机器学习平台由BDA Studio以及BDALib 构成，分别是大数据机器学习库和可拖拽大数据机器学习平台 \href{http://bda.space:18080}{BDA Studio}.
 \begin{itemize}
   \item 开发三个图算法(\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), 相比于graphx原生算法相比可收敛，具有可扩展性、速度快等特点，可以支持上10亿规模顶点的图数据挖掘.
   \item 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine} local 版本、spark shared 版本、spark graphx版本, 并使用该算法对movie-lens数据集进行评分预测.
