@@ -1,9 +1,10 @@
 % !TEX program = xelatex
 
-\documentclass{resume}
+\documentclass[13pt,a4paper]{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage[colorlinks,linkcolor=red]{hyperref}
+\geometry{left=1.0cm,right=1.0cm,top=1.5cm,bottom=0.5cm}
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
@@ -24,36 +25,47 @@
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages:  Python == C++ > scala > Shell > Java
-  \item Platforms: Spark, Hadoop, Graphx
+  \item Programming Languages:  C++ == Python > scala > Shell > Java
+  \item Platforms: Spark, Hadoop
   \item Languages: Chinese - Native Speaker; English - Fluent; Japanese - JLPT N2.
 \end{itemize}
 
 
 \section{\faUsers\ Experience}
 \datedsubsection{\faCheck\ {\textbf{Baidu FCR, Beijing, China}}  }{2015.05 -- 2015.08}
-\role{Intern}{ Machine Learning Engineer}
-Mainly Responsible for Model Evaluation, Feature Selection and Feature Investigation.
+\textbf{Role}\ \ Data Mining Intern Engineer
+\newline
+\textbf{Project Overview}\ \ Mainly Responsible for Model Evaluation, Feature Selection and Feature Investigation.
 \begin{itemize}
 %  \item Fcr-Model doen't have uniform feature analysis tools, and feature selection work is done completely by  independent assortment, so the process  is  far from efficiency. I developed a Feature evaluation tool based on the feature extraction system Adfea and model training system Platform to assist feature selection.
 %  \item The online CPM prediction model for suggestion query(also called sug) is time-consuming, it can be greatly improved if time shrinkage strategy is utilized in the model. I do the experiment with half-year Baidu's suggestion query dataset to verify the model performance when the strategy is applied with different shrinkage factor and different time-window size.
 %  \item Survey the CTR Prediction competition on Kaggle, and write a report about how winners processed the contiguous features, which model they have used and how they combine them.\end{itemize}
 
-\item Developed a Feature evaluation tool based on the feature extraction system Adfea and model training system Platform to assist feature selection. With no uniform feature analysis tools beforehand, this work brings an end to independent assortment and thus remarkably raised the overall efficiency in FCR-Model.
-\item Experimented with half-year Baidu’s suggestion query dataset to verify the model performance when the strategy is applied with different shrinkage factor and different time-window size. Time shrinkage strategy is widely utilized in the model to cut down the time consumption of the online CPM prediction model for suggestion query (i.e., sug). 
-\item Developed a through report on the strategy of the CTR Prediction competition winners on Kaggle. Concerning data include the procession of contiguous features, model utilization and combination.
+\item {\emph{Feature Analysis Tool}}:Developed a Feature evaluation tool based on the feature extraction system Adfea and model training system Platform to assist feature selection. With no uniform feature analysis tools beforehand, this work brings an end to independent assortment and thus remarkably raised the overall efficiency in FCR-Model.
+\item {\emph{Sug Model Evaluation}}: Experimented with half-year Baidu’s suggestion query dataset to verify the model performance when the strategy is applied with different shrinkage factor and different time-window size. Time shrinkage strategy is widely utilized in the model to cut down the time consumption of the online CPM prediction model for suggestion query (i.e., sug). 
+\item {\emph{Feature Survey}}: Developed a through report on the strategy of the CTR Prediction competition winners on Kaggle. Concerning data include the procession of contiguous features, model utilization and combination.
 \end{itemize}
+
 \datedsubsection{\faCheck\ {\textbf{Graphical Big Data Machine Learning Platform BDA}}}{2015.08 -- present}
 
 %\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-\role{Team Project}{Developer, Spark}
-Consists of \href{http://bda.space:18080}{BDA Studio}(dragable machine learning platform) and BDA Lib(machine learning algorithm library).
+% \role{Team Project}{Developer, Spark}
+\textbf{Role}\ \ Algorithm Engineer
+\newline
+\textbf{Project Overview}\ \  Consists of \href{http://bda.space:18080}{BDA Studio}(dragable machine learning platform) and BDA Lib(machine learning algorithm library).
 \begin{itemize}
-  \item Developed three graph algorithm (\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), compared with intrinsic algorithms in spark graphx, they have several distinguishing features including fast convergence, scalability, and quickness.
-  \item Implemented \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine}  with local version, spark shared version, spark graphx version. Completed the Movie Rating task on MovieLens dataset from Netflix  with the algorithm and got a decent RMSE.
-  \item Implemented \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{NMF}  with spark graphx which support model parallelizaztion instead of merely data parallelization. Carried out community detection in graph computing field and completed the Movie Rating task on MovieLens dataset from Netflix with the algorithm.
+  \item {\emph{Graph Algorithm}}: Developed three graph algorithm (\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), compared with intrinsic algorithms in spark graphx, they have several distinguishing features including fast convergence, scalability, and quickness.
+  \item {\emph{Recommendation Algorithm}}: Implemented \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine}  and \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{NMF} with local version, spark shared version, spark graphx version. Completed the Movie Rating task on MovieLens dataset from Netflix with the algorithm and got a decent RMSE.
+  \item {\emph{ETL}}: Implemented ETL module on BDA Studio, supported data loading and exporting from different data sources like Mysql, Hive and Json etc.
   \end{itemize}
 
+\datedsubsection{\faCheck\ {\textbf{\href{http://bdg.ctyun.cn}{Tianyi Big Data Application Competition}}}}{2015.12 -- 2016.03}
+%\role{团队项目}{Developer, Spark}
+\begin{itemize}
+\item {\emph{Overview}}: Predict how many times each user visit 10 specific video websites in the 8th week given the last 7 weeks' visiting log.
+\item {\emph{Duties}}: Feature survey, Feature extraction, Feature Evaluation
+  \item {\emph{Achievement}}: Survived the first season as rank 6 and finally got the {\textbf{\href{http://bdg.ctyun.cn/algr_detail/PLXBy500006w?pageIndex=al_info}{best prediction result}}} among the {\textbf{1111}} participated teams.
+\end{itemize}
 %\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
 %\role{\LaTeX, Maintainer}{Individual Projects}
 %An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
@@ -73,7 +85,6 @@ Consists of \href{http://bda.space:18080}{BDA Studio}(dragable machine learning 
 
 \section{\faHeartO\ Honors and Awards}
 \datedline{\textit{Sesssion Segmentation Method Based on COBWEB}, Indexed in EI}{2012.06}
-\datedline{\textit{Sesssion Segmentation Method Based on Naive Bayes}, Indexed in ISTP}{2012.09}
 \datedline{\textit{National Scholarships for three successive years}, JiLin University}{2011 -- 2013}
 \datedline{\textit{School Outstanding Student for four successive years}, JiLin University}{2011 -- 2013}
 
