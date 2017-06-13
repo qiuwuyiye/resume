@@ -8,9 +8,11 @@
 /*.bat
 /\!*
 .DS_Store
-*.pdf
-
+*.jpg
+*.png
+*.JPG
 ############################################
+ddAge,Born,Height,Name
 ## LATEX TEMPORARY FILES
 ############################################
 

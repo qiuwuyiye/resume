@@ -2,88 +2,119 @@
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
 
-\documentclass[13pt,a4paper]{resume}
+\documentclass[10pt,a4paper]{resume}
 \usepackage{geometry}
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage[colorlinks,linkcolor=red]{hyperref}
 \usepackage{cite}
-\geometry{left=1.0cm,right=1.0cm,top=1.0cm,bottom=1.0cm}
+\geometry{left=0.8cm,right=0.8cm,top=0.6cm,bottom=0.0cm}
+
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
+%\bibliography{mycite}
 
-\name{李萍}
 
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 \hfill\
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} \hfill\
+		\par \normalsize \normalfont}
+		
+\MyName{\textbf{李萍}}
+\MySlogan{目标岗位：\textbf{算法工程师}}
 % {E-mail}{mobilephone}{homepage}
 % be careful of _ in emaill address
-\contactInfo{lipingict@gmail.com}{(+86) 130-200-48987}{http://www.lipingict.com}
+\contactInfo{lipingict@gmail.com}{(+86) 130-200-48987}{https://qiuwuyiye.github.io}
 % {E-mail}{mobilephone}
 % keep the last empty braces!
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
  
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{中国科学院计算技术研究所,  免试保送}, 北京}{2014 -- 2017}
-\textit{在读硕士}\ 计算机科学与技术
-\datedsubsection{\textbf{吉林大学, 1\%}, 长春, 吉林}{2010 -- 2014}
-\textit{学士}\ 计算机科学与技术
-
-%\section{\faTag\ 自我评价}
-%\ \ \ \ \\踏实认真，有团队协作的能力和沟通协调的能力。有扎实的编程功底以及较丰富的大数据处理经验。熟悉Hadoop, Spark等大数据平台，能熟练使用MapReduce，BSP分布式计算框架。对机器学习等算法有一定认识。
+\datedsubsection{\textbf{中国科学院计算技术研究所，计算机，免试保送}，北京}{2014 -- 2017}
+% \textit{在读硕士}\ 计算机科学与技术
+\datedsubsection{\textbf{吉林大学，计算机科学与技术，1\%}，长春，吉林}{2010 -- 2014}
+% \textit{学士}\ 计算机科学与技术
 
 
-% increase linespacing [parsep=0.5ex]
-\section{\faCogs\ 技能}
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Python == C++ > Scala > Shell
-  \item 平台: Spark, Hadoop
-  \item 语言: 英语 - 熟练(六级) , 日语(JLPT N2)
+\vspace{0.5ex}
 
- % \item 统计: numpy, scikit-learn, pandas, matplotlib
-\end{itemize}
-
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\faCheck\ {\textbf{百度凤巢}}  }{2015年5月 -- 2015年8月}
-\textbf{个人职责}\ \ 数据挖掘工程师
-\newline
+\section{\faUsers\ 实习经历}
+\datedsubsection{\faCheck\ {\textbf{百度凤巢}}\qquad\qquad\qquad\qquad\qquad\qquad 数据挖掘工程师}{2015年5月 -- 2015年8月}
 %\begin{itemize}
 %  \item 基于凤巢特征抽取系统Adfea和模型训练系统Platform开发了一个Feature评价工具包, 协助了一个产品上线.
 %  \item 评估使用时间衰减策略来预测suggestion query 的CPM.
 %  \item 调研Kaggle CTR prediction 比赛特征以及方法.
 %\end{itemize}
 \begin{onehalfspacing}
-\textbf{项目概述}\ \ 在FCR\_Model实习期间主要负责模型评估、特征挑选以及特征调研.
+\textbf{项目概述}\ \ 在FCR\_Model实习期间主要负责模型评估、特征挑选以及特征调研。
 \begin{itemize}
-  \item {\emph{特征分析工具}}: 凤巢没有统一的特征分析工具，特征的筛选是自由组合，筛选效率较低，基于凤巢特征抽取系统Adfea和模型训练系统Platform开发一个Feature评价工具包用来分析特征从而助力特征挑选.
-  \item {\emph{sug 模型评测}}: 线上使用的sug cpm预估模型效率较低，使用时间衰减策略来预测suggestion query 的CPM的可以极大地提高效率. 负责评估该策略的效果，使用百度半年的sug数据集在不同衰减因子以及时间窗口上做测试，效果略好过线上的baseline.
-  \item {\emph{特征调研}}: 调研Kaggle CTR prediction 比赛中优胜选手使用的特征, 连续特征值的处理以及使用的模型，并写出详细的调查报告.
+  \item {\emph{特征分析工具}}: 基于凤巢特征抽取系统Adfea和模型训练系统Platform开发一个特征评价工具以助力特征挑选。
+  \item {\emph{Sug 策略评测}}: 评估时间衰减策略在不同衰减因子以及时间窗口上的Sug CPM预测效果。
+ % 负责评估该策略的效果，使用百度半年的sug数据集在不同衰减因子以及时间窗口上做测试，效果略好过线上的baseline.
+  \item {\emph{特征调研}}: 调研Kaggle CTR Prediction 比赛中优胜选手使用的特征、连续特征值的处理方式以及使用的模型。
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\faCheck\ {\textbf{图形化大数据机器学习平台 \href{http://bda.space:18080}{BDA Studio}}}}{2015年8月 -- 至今}
-%\role{团队项目}{Developer, Spark}
-\textbf{个人职责}\ \ 算法工程师\newline
+
+\datedsubsection{\faCheck\ {\textbf{微软亚洲工程院}}  \qquad\qquad\qquad\qquad\quad 研发工程师}{2017年4月 -- 2017年5月}
+%\begin{itemize}
+%  \item 基于凤巢特征抽取系统Adfea和模型训练系统Platform开发了一个Feature评价工具包, 协助了一个产品上线.
+%  \item 评估使用时间衰减策略来预测suggestion query 的CPM.
+%  \item 调研Kaggle CTR prediction 比赛特征以及方法.
+%\end{itemize}
 \begin{onehalfspacing}
-\textbf{项目概述}\ \ 图形化机器学习平台由BDA Studio以及BDALib 构成，分别是大数据机器学习库和可拖拽大数据机器学习平台BDA Studio.
+\textbf{项目概述}\ \ 负责Bing Map中Chain Store数据的采集以及Cortana Answer在若干应用场景下的Bug修复。
 \begin{itemize}
-  \item {\emph{图算法}}: 开发三个图算法(\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), 相比于graphx原生算法相比可收敛，具有可扩展性、速度快等特点，可以支持上10亿规模顶点的图数据挖掘.
-  \item {\emph{推荐算法}}: 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine} 和\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000021-160229111630187-oozie-oozi-W}{NMF}算法的local 版本、spark shared 版本、spark graphx版本, 并使用该算法对movie-lens数据集进行评分预测.
- % \item 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000021-160229111630187-oozie-oozi-W}{NMF}算法的spark graphx版本，支持模型分布式, 并使用该算法进行过社区发现以及电影评分预测.
- \item {\emph{ETL}}: 完成BDA Studio 的ETL功能，支持Mysql, Hive等异源数据的导入.
+  \item {\emph{Chain Store数据采集}}: 构建连锁店基本信息采集工作流，目前可稳定为Bing Map提供连锁店数据。
+  \item {\emph{Cortana Answer Bug 修复}}: 修复了Cortana Answer中天气以及连续剧等应用场景下的若干Bug。
+ % 负责评估该策略的效果，使用百度半年的sug数据集在不同衰减因子以及时间窗口上做测试，效果略好过线上的baseline.
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\faCheck\ {\textbf{\href{http://bdg.ctyun.cn}{天翼大数据算法应用大赛}}}}{2015.12 -- 2016.03}
+\section{\faUsers\ 项目经历}
+\datedsubsection{\faCheck\ {\textbf{图形化大数据机器学习平台 \href{http://bda.space:18080}{BDA Studio}}}}{2015年8月 -- 2016年10月}
+%\role{团队项目}{Developer, Spark}
+\begin{onehalfspacing}
+\textbf{项目概述}\ \ 图形化机器学习平台由可拖拽大数据机器学习平台BDA Studio及大数据机器学习库BDALib 构成。
+\begin{itemize}
+  \item {\emph{图算法}}: 开发三个图算法(\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000001-160229111630187-oozie-oozi-W}{Pagerank}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000015-160229111630187-oozie-oozi-W}{ICmodel}, \href{http://bda.space:18080/BDAStudioMonitor.html?job=0000206-151222123224608-oozie-oozi-W}{KShell}), 相比于graphx原生算法可收敛、可扩展性好、速度快，可支持上10亿规模顶点的图数据挖掘。
+  \item {\emph{推荐算法}}: 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000009-160229111630187-oozie-oozi-W}{Factorization Machine} 和\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000021-160229111630187-oozie-oozi-W}{NMF}算法的单机及分布式版本, 在movie-lens上RMSE约0.80。
+ % \item 实现\href{http://bda.space:18080/BDAStudioMonitor.html?job=0000021-160229111630187-oozie-oozi-W}{NMF}算法的spark graphx版本，支持模型分布式, 并使用该算法进行过社区发现以及电影评分预测.
+ \item {\emph{ETL}}: 完成BDA Studio 的ETL功能，支持Mysql, Hive等异源数据的导入。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\faCheck\ {\textbf{大规模矩阵分解算法研究与实现}}}{2016年11月 -- 2017年4月}
+%\role{团队项目}{Developer, Spark}
+\begin{onehalfspacing}
+\textbf{毕业论文}\ \ 研究及实现基于图计算框架的大规模矩阵分解算法。
+\begin{itemize}
+  \item {\emph{在线图划分算法}}: 提出并实现了在线图分割算法BiEdgePartition2D,在保持子图平衡性的同时降低了复制因子。
+  \item {\emph{基于模型分布的分布式矩阵分解实现}}: 将待分解矩阵用二部图的形式存储，利用BiEdgePartition2D算法进行分割，基于Pregel图计算框架实现矩阵分解算法，最终减少了约20\%的平均迭代时间。
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faUsers\ 比赛经历}
+\datedsubsection{\faCheck\ {\textbf{\href{http://bdg.ctyun.cn}{天翼大数据算法应用大赛}}}\qquad\qquad\qquad\qquad\qquad\quad {\textbf{\href{http://bdg.ctyun.cn/algr_detail/PLXBy500006w?pageIndex=al_info}{冠军(1/1111)}}}}{2015年12月 -- 2016年3月}
 %\role{团队项目}{Developer, Spark}
 \begin{onehalfspacing}
 \begin{itemize}
 \item {\emph{概述}}: 使用前7周用户每天点击10个视频网站的统计数据，预测用户第八周每天点击视频网站的数量。
-\item {\emph{职责}}: 特征调研，特征抽取，特征评价
-  \item {\emph{成绩}}: 比赛历时两个月，第一赛季排行榜第九名, 第二赛季在{\textbf{1111名}}队伍中{\textbf{\href{http://bdg.ctyun.cn/algr_detail/PLXBy500006w?pageIndex=al_info}{斩获第一}}}。
-  \item {\emph{技术}}: Spark, Xgboost, GBDT
+\item {\emph{职责}}: 特征调研，特征抽取，特征评价。
 \end{itemize}
 \end{onehalfspacing}
 
+\datedsubsection{\faCheck\ {\textbf{\href{http://bdg.ctyun.cn}{Google Girl Hackthon 2017}}} \qquad\qquad\qquad\qquad\qquad 最有影响力奖}{2017年3月}
+%\role{团队项目}{Developer, Spark}
+\begin{onehalfspacing}
+\begin{itemize}
+\item {\emph{概述}}: 在三天时间内独自设计并实现了基于表达学习的人才检索系统Talent Search。
+  \item {\emph{模型训练}}:基于表达学习，将用户的评论信息和人才需求映射到相同的空间，进行人才匹配。
+\end{itemize}
+\end{onehalfspacing}
 %\datedsubsection{\textbf{新浪微博相似用户关系展示}}{2015 年5月 -- 至今}
 %\role{Developer, Python, Django, Networkx}{个人项目}
 %\begin{onehalfspacing}
@@ -103,25 +134,27 @@
 %  \item main contribution
 %\end{itemize}
 
+% increase linespacing [parsep=0.5ex]
+
+
 
 \section{\faHeartO\ 论文及获奖情况}
-\datedline{\textit{Sesssion Segmentation Method Based on COBWEB}, EI 检索}{2012 年6 月}
-\datedline{\textit{Sesssion Segmentation Method Based on Naive Bayes}, ISTP检索}{2012 年9 月}
-\datedline{\textit{连续四年国家奖学金}, 吉林大学}{2011年 -- 2013年}
-\datedline{\textit{连续四年吉林大学优秀学生}, 吉林大学}{2011年 -- 2013年}
-%
-%\section{\faInfo\ 其他}
-%% increase linespacing [parsep=0.5ex]
-%\begin{itemize}[parsep=0.5ex]
-%  \item 技术博客: http://www.lipingict.com
-%  % \item GitHub: https://github.com/qiuwuyiye
-%  \item 语言: 英语 - 熟练(六级 555)
-%  \item 语言: 日语(JLPT N2)
-%  \item 爱好：乒乓球, 游泳，摄影
-%\end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\datedline{\textit{分布式算法实现比较研究：数据分布与模型分布}, CCIR2016}{2016年6月}
+\datedline{\textit{Ease the Process of Machine Learning with Dataflow}, CIKM2016}{2016年5月}
+\datedline{\textit{Sesssion Segmentation Method Based on Naive Bayes}, ISTP检索}{2012 年9 月}
+\datedline{\textit{Sesssion Segmentation Method Based on COBWEB}, EI 检索}{2012 年6 月}
+%\datedline{\textit{{\textbf{\href{http://bdg.ctyun.cn}{天翼大数据算法应用大赛}}}}, 冠军（1/1111)}{2012 年6 月}
+
+
+\datedline{\textit{连续三年国家奖学金}, 吉林大学}{2011年 -- 2013年}
+
+%\section{\faCogs\ 技能}
+%\begin{itemize}[parsep=0.5ex]
+%  \item 编程语言: Python =  C++ > Scala > Shell
+  %\item 语言: 英语 - 熟练(六级) , 日语(JLPT N2)
+%\end{itemize}
+%\section{\faTag\ 自我评价}
+%\ \ \ \ \\踏实认真，有团队协作的能力和沟通协调能力。有扎实的编程功底以及较丰富的大数据处理经验。熟悉大规模数据挖掘和机器学习，能熟练使用Hadoop, Spark等大数据平台。
+
 \end{document}
